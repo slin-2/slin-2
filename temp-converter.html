@@ -1,0 +1,59 @@
+<!-- write your name here -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Temperature Converter</title>
+        <link rel="stylesheet" href="temp-converter.css">
+    </head>
+    <body>
+        <h1>Temperature Converter</h1>
+        
+        <div class="converter-section">
+            <p>Enter a temperature value and select the conversion type.</p>
+            
+            <!-- getting the number input from the user -->
+            <div class="input-group">
+                <label for="temperature">Temperature:</label>
+                <input type="number" id="temperature" placeholder="Enter value">
+            </div>
+            
+            <!-- getting the selection input from the user -->
+            <div class="input-group">
+                <label for="conversion-type">Conversion:</label>
+                <select id="conversion-type" onchange="updateFormula()">
+                    <option value="ftoc">Fahrenheit to Celsius</option>
+                    <option value="ctof">Celsius to Fahrenheit</option>
+                </select>
+            </div>
+            
+            <!-- display the formula based on the selection -->
+            <div id="formula" class="formula">°C = (°F - 32) × 5/9</div>
+            
+            <!-- appropriate functions are called when clicked on each button -->
+            <div>
+                <button onclick="convertTemperature()">Convert</button>
+                <button onclick="clearConverter()" class="clear">Clear</button>
+            </div>
+            
+            <div id="conversion-result" class="result">
+                <!-- result will be displayed here -->
+            </div>
+            
+            <div id="temp-assessment" class="assessment">
+                <!-- assessment will be displayed here -->
+            </div>
+            
+
+
+            
+            <!-- TODO -->
+            <!-- add temperatur assessment div here with id="temp-assessment" class="assessment" -->
+            
+        </div>
+
+        <script src="temp-converter.js"></script>
+    </body>
+</html>

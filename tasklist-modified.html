@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Tasks For Today</title>
+    <link rel="stylesheet" href="tasklist-modified.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>TaskList with Wellness Suggestions</h1>
+      
+      <div class="app-description">
+        <p>This app helps you organize tasks that need to be completed today. Add your tasks with a due date (MM/DD) and time (24-hour format). Tasks will be automatically sorted by due date and time.</p>
+        <p>Use the "Random Task" button for health and wellness suggestions to take care of yourself throughout your day!</p>
+      </div>
+      
+      <div class="input-container">
+        <div class="input-group">
+          <input type="text" id="task-input" placeholder="Enter a task...">
+          <input type="text" id="date-input" placeholder="MM/DD" maxlength="5">
+          <input type="text" id="time-input" placeholder="HH:MM" maxlength="5">
+        </div>
+        <div class="button-group">
+          <button id="add-button" onclick="addTask()">Add Task</button>
+          <button id="clear-input-button" onclick="clearInput()">Clear Input</button>
+          <button id="random-task-button" onclick="addRandomTask()">Random Task</button>
+        </div>
+      </div>
+      <div class="tasks-container">
+        <h2>Your Tasks <button id="clear-tasks-button" onclick="clearTasks()">Clear All Tasks</button></h2>
+        <ul id="task-list" class="task-list"></ul>
+      </div>
+    </div>
+
+    <script src="tasklist-modified-starter.js"></script>
+  </body>
+</html>
